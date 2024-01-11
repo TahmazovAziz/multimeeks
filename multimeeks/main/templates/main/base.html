@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static "css/main.css" %}">
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrapper">
+	<herder class="header">
+		<div class="container">
+			<div class="header_logo logo">
+				<a href="{% url "home" %}">
+				<div class="header_logo_name logo_name">
+					<h1 class='name'>MULTMEEKS</h1>
+				</div>
+				</a>
+			</div>
+		</div>
+		</herder>
+	<main class="main">
+        {%block content%}
+        {%endblock%}
+	</main>
+	</div>
+</body>
+</html>

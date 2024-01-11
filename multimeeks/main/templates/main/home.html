@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{%block content%}
+
+<div class="container">
+    <div class="title">
+        <h1>СМОТРИТЕ МУЛЬТИКИ БЕСПЛАТНО!</h1>
+    </div>
+    <hr>
+    <div class="carts">
+        {%for item in film_view%}
+        <div class="cart">
+            <a href="{% url "film" item.id %}">
+            <figure class="item">
+                <img src="media/{{item.poster}}" height="368px" alt="">
+                 <figcaption class="subtitle"><h4>{{item.name}}</h4></figcaption>
+                 <hr>
+                 <figcaption class="subtitle"><p>Время:{{item.length}}</p></figcaption>
+            </figure>
+            </a>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+
+{%endblock%}
